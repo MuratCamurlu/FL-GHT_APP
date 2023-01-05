@@ -6,6 +6,7 @@ from django.contrib.auth.password_validation import validate_password
 
 
 class RegisterSerializer(serializers.ModelSerializer):
+    
 
     email = serializers.EmailField(
         required=True,
@@ -49,3 +50,5 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.set_password(password)
         user.save()
         return user
+    
+    
